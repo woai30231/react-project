@@ -1,0 +1,19 @@
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style:none;
+  ul{
+    width:300px;
+    display:flex;
+    li{
+        flex:0 a 150px;
+        list-style:none;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
