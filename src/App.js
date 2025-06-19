@@ -1,7 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import {Outlet,Link} from 'react-router-dom'
-import "./navStyles.scss"
+import "./css/navStyles.scss"
 
 function App() {
   return (
