@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import {Outlet} from 'react-router-dom'
+import {Outlet,Link} from 'react-router-dom'
+import "./navStyles.scss"
 
 function App() {
   return (
     <div className="App">
+      <nav className="nav-list">
+        <ul>
+          <li>
+            <Link to="/help">关于我们</Link>
+          </li>
+          <li>
+            <Link to="/contact">联系我们</Link>
+          </li>
+        </ul> 
+      </nav>
       <Outlet />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
