@@ -5,6 +5,7 @@ const Contact = React.lazy(() => import('../views/Contact'));
 const Phone = React.lazy(() => import('../views/Phone'));
 const Email = React.lazy(() => import('../views/Email'));
 const Help = React.lazy(() => import('../views/Help'));
+const Sketest = React.lazy(() => import('../views/Sketest'));
 
 const AppRoutes = () => (
   <Router>
@@ -13,6 +14,7 @@ const AppRoutes = () => (
           <Route path="/" element={<App />}>
             <Route index element={<Contact />}/>
           
+            <Route path="/sketest" element={<Sketest />} />
             <Route path="/contact" element={<Contact />} >
               <Route index element={<Email />} />
               <Route path="phone" element={<Phone />} />

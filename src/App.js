@@ -32,6 +32,9 @@ function App() {
           <li>
             <Link to="/contact">联系我们</Link>
           </li>
+          <li> 
+            <Link to="/sketest">骨架屏</Link>
+          </li>
         </ul> 
       </nav>
       <Outlet />
