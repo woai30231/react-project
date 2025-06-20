@@ -1,11 +1,29 @@
 import logo from './logo.svg';
 import './css/App.css';
+import React ,{useState,useEffect} from'react';
 import {Outlet,Link} from 'react-router-dom'
+import Skeleton from './components/Skeleton'; 
 import "./css/navStyles.scss"
 
+
 function App() {
-  return (
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // 模拟API请求
+    setTimeout(() => {
+      setData({ title: '骨架屏后标题', content: '骨架屏后内容...' });
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+
+  return (loading?<Skeleton discription="骨架屏父层传递props"/>:
     <div className="App">
+      <div>{data.title}</div>
+      <div>{data.content}</div>
       <nav className="nav-list">
         <ul>
           <li>
